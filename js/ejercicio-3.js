@@ -8,18 +8,20 @@ repitiendo 50 veces esta operación.
 let apariciones = new Array(13).fill(0); 
 
 for (let i = 0; i < 50; i++) {
-    const dado1 = Math.floor(Math.random() * 6) + 1;
-    const dado2 = Math.floor(Math.random() * 6) + 1;
-    const suma = dado1 + dado2;
+    const dado1 = Math.floor(Math.random() * 6) + 1
+    const dado2 = Math.floor(Math.random() * 6) + 1
 
+    const suma = dado1 + dado2
     apariciones[suma]++;
 }
 
-// Crear una tabla de resultados
-let tablaResultados = [];
-for (let i = 2; i <= 12; i++) {
-    tablaResultados.push({ Suma: i, Apariciones: apariciones[i] });
+document.writeln(`<table class="table table-striped-columns">`)
+document.writeln(`<table> <tr><th>Suma 🎲🎲</th><th>Apariciones</th></tr>`)
+
+ for (let i = 2; i <= 12; i++) {
+  document.writeln( `<tr><td>${i}</td><td>${apariciones[i]}</td></tr>`)
 }
 
-// Mostrar en consola como tabla
-console.table(tablaResultados);
+document.writeln(`</table>`)
+ 
+
