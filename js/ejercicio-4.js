@@ -11,6 +11,6 @@ function esParOImpar(nro){
     }
 }
 
-const numero = parseInt(prompt('Ingrese un número entero:'))
+const numero = parseInt(prompt('Ingrese un numero entero:'))
 const resultado = esParOImpar(numero)
-document.writeln(`<p> El resultado es ${resultado}</p>`)
+document.writeln(`<p> El numero ${numero} es ${resultado}</p>`)
